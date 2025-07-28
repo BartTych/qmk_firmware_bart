@@ -73,34 +73,38 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      */
     
     [BASE] = LAYOUT(
-        KC_ESC,  KC_DOT, KC_J,    KC_I,    KC_Y,  KC_COMM,   KC_W,    KC_L,    KC_C,    KC_U,    KC_F,    KC_CAPS,    KC_BSPC,
-        KC_TAB,KC_A,    KC_O,    KC_E,    KC_R,    KC_P,    KC_D,    KC_H,    KC_T,    KC_N,    KC_S,    KC_K,    KC_ENT,
-        KC_LSFT, KC_SCLN ,KC_B,    KC_C,    KC_D,    KC_A,    KC_B,    KC_M,    KC_G,    KC_V,    KC_Z,    KC_UP,    KC_L,
-        KC_A,KC_A,    KC_B,    KC_C,    KC_D,    KC_E,    KC_SPACE     ,    KC_H,    KC_I,    KC_LEFT,    KC_DOWN,    KC_RGHT
+        KC_ESC ,  KC_DOT, KC_J   ,    KC_I,    KC_Y,  KC_COMM,   KC_W,    KC_L,    KC_C,    KC_U,    KC_F,    KC_CAPS,   KC_BSPC,
+        KC_TAB ,   KC_A , KC_O   ,    KC_E,    KC_R,    KC_P,    KC_D,    KC_H,    KC_T,    KC_N,    KC_S,    KC_RSFT,    KC_ENT,
+        KC_LSFT, KC_SCLN, KC_B   ,    KC_C,    KC_D,    KC_A,    KC_B,    KC_M,    KC_G,    KC_V,    KC_Z,    KC_UP,     _______,
+        KC_LCTL, KC_LALT, KC_LCMD,  KC_LCMD, MO(NUM),    KC_SPACE   , MO(SYM), MO(SYM), MO(FN),  KC_LEFT,    KC_DOWN,    KC_RGHT
     ),
+    
     [NUM] = LAYOUT(
-        KC_ESC,  KC_DOT, KC_J,    KC_I,    KC_Y,  KC_COMM,   KC_W,    KC_L,    KC_C,    KC_U,    KC_F,    KC_CAPS,    KC_BSPC,
-        KC_TAB,KC_A,    KC_O,    KC_E,    KC_R,    KC_P,    KC_D,    KC_H,    KC_T,    KC_N,    KC_S,    KC_K,    KC_ENT,
-        KC_LSFT, KC_SCLN ,KC_B,    KC_C,    KC_D,    KC_A,    KC_B,    KC_M,    KC_G,    KC_V,    KC_Z,    KC_UP,    KC_L,
-        KC_A,KC_A,    KC_B,    KC_C,    KC_D,    KC_E,    KC_SPACE     ,    KC_H,    KC_I,    KC_LEFT,    KC_DOWN,    KC_RGHT
+        _______, _______, KC_LCBR ,KC_RCBR,  KC_MINS, _______, _______, KC_7   ,    KC_8,    KC_9, _______, _______, _______,
+        _______, KC_UNDS, KC_LBRC ,KC_LPRN,  KC_RPRN, KC_PLUS, KC_ASTR, KC_4   ,    KC_5,    KC_6, KC_EQL , _______, _______,
+        _______, KC_COLN, KC_RBRC ,KC_EXLM,  KC_HASH,   KC_LT,   KC_GT, KC_1   ,    KC_2,    KC_3, KC_SLSH, _______, _______,
+        _______, _______, _______ ,_______,  _______,        KC_0     , KC_0   , _______, _______, _______, _______, _______
     ),
+    
     [SYM] = LAYOUT(
-        KC_ESC,  KC_DOT, KC_J,    KC_I,    KC_Y,  KC_COMM,   KC_W,    KC_L,    KC_C,    KC_U,    KC_F,    KC_CAPS,    KC_BSPC,
-        KC_TAB,KC_A,    KC_O,    KC_E,    KC_R,    KC_P,    KC_D,    KC_H,    KC_T,    KC_N,    KC_S,    KC_K,    KC_ENT,
-        KC_LSFT, KC_SCLN ,KC_B,    KC_C,    KC_D,    KC_A,    KC_B,    KC_M,    KC_G,    KC_V,    KC_Z,    KC_UP,    KC_L,
-        KC_A,KC_A,    KC_B,    KC_C,    KC_D,    KC_E,    KC_SPACE     ,    KC_H,    KC_I,    KC_LEFT,    KC_DOWN,    KC_RGHT
+        _______, _______, _______, KC_TILD,  _______, _______, _______, KC_EXLM, _______, _______, _______, _______, _______,
+        _______, KC_AT  , KC_PERC ,KC_QUES,  KC_HASH, _______, _______, KC_UNDS, KC_AMPR, KC_PIPE, KC_EQL , _______, _______,
+        _______, KC_COLN,  _______,_______,  KC_DLR,  _______, _______, _______, _______,    KC_3, KC_SLSH, _______, _______,
+        _______, _______,  _______,_______,  _______,        KC_0     , KC_0   , _______, _______, _______, _______, _______
     ),
+    
     [FN] = LAYOUT(
-        KC_ESC,  KC_DOT, KC_J,    KC_I,    KC_Y,  KC_COMM,   KC_W,    KC_L,    KC_C,    KC_U,    KC_F,    KC_CAPS,    KC_BSPC,
-        KC_TAB,KC_A,    KC_O,    KC_E,    KC_R,    KC_P,    KC_D,    KC_H,    KC_T,    KC_N,    KC_S,    KC_K,    KC_ENT,
-        KC_LSFT, KC_SCLN ,KC_B,    KC_C,    KC_D,    KC_A,    KC_B,    KC_M,    KC_G,    KC_V,    KC_Z,    KC_UP,    KC_L,
-        KC_A,KC_A,    KC_B,    KC_C,    KC_D,    KC_E,    KC_SPACE     ,    KC_H,    KC_I,    KC_LEFT,    KC_DOWN,    KC_RGHT
+        _______, _______, _______, _______,  _______, _______, _______, KC_F7  , KC_F8  , KC_F9  , KC_F10 , KC_F11 , KC_F12 ,
+        _______, _______, _______, _______,  _______, _______, _______, KC_F4  , KC_F5  , KC_F6  , _______, _______, _______,
+        _______, _______, _______, _______,  _______, _______, _______, KC_F1  , KC_F2  , KC_F3  , _______, _______, _______,
+        _______, _______, _______, _______,  _______,      _______    , _______, _______, _______, _______, _______, _______
     ),
+
     [QWERTY] = LAYOUT(
-        KC_ESC,  KC_DOT, KC_J,    KC_I,    KC_Y,  KC_COMM,   KC_W,    KC_L,    KC_C,    KC_U,    KC_F,    KC_CAPS,    KC_BSPC,
-        KC_TAB,KC_A,    KC_O,    KC_E,    KC_R,    KC_P,    KC_D,    KC_H,    KC_T,    KC_N,    KC_S,    KC_K,    KC_ENT,
-        KC_LSFT, KC_SCLN ,KC_B,    KC_C,    KC_D,    KC_A,    KC_B,    KC_M,    KC_G,    KC_V,    KC_Z,    KC_UP,    KC_L,
-        KC_A,KC_A,    KC_B,    KC_C,    KC_D,    KC_E,    KC_SPACE     ,    KC_H,    KC_I,    KC_LEFT,    KC_DOWN,    KC_RGHT
+        _______,  KC_Q  , KC_W   ,    KC_E,    KC_R, KC_T, KC_Y,    KC_U,    KC_I,    KC_O,    KC_P, _______, _______,
+        _______,  KC_A  , KC_S   ,    KC_D,    KC_F, KC_G, KC_H,    KC_J,    KC_K,    KC_L, KC_SCLN, _______, _______,
+        _______,  KC_Z  , KC_X   ,    KC_C,    KC_V, KC_B, KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH, _______, _______,
+        _______, _______, _______, _______, _______,    _______, _______, _______, _______, _______, _______, _______
     )
 
 
