@@ -27,11 +27,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      
     NUM
      * ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┐
-     * │ESC│   │ { │ } │ - │   │   │ 7 │ 8 │ 9 │ ^ │ \ │   │
+     * │ESC│   │   │ { │ } │   │   │ 7 │ 8 │ 9 │ ^ │ \ │   │
      * ├───┼───┼───┼───┼───┼───┼───┼───┼───┼───┼───┼───┼───┤
-     * │TAB│ _ │ [ │ ( │ ) │ + │ * │ 4 │ 5 │ 6 │ = │   │   │
+     * │TAB│ _ │ - │ ( │ ) │ + │ * │ 4 │ 5 │ 6 │ = │   │   │
      * ├───┼───┼───┼───┼───┼───┼───┼───┼───┼───┼───┼───┼───┤
-     * │SHI│ : │ ] │ ! │ # │ < │ > │ 1 │ 2 │ 3 │ / │UP │   │
+     * │SHI│ : │   │ [ │ ] │ < │ > │ 1 │ 2 │ 3 │ / │UP │   │
      * ├───┼───┼───┼───┼───┼───┴───┼───┼───┼───┼───┼───┼───┤
      * │CTR│ALT│COM│COM│NUM│   0   │ 0 │   │   │LEF│DOW│RIG│
      * └───┴───┴───┴───┴───┴───────┴───┴───┴───┴───┴───┴───┘
@@ -73,16 +73,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      */
     
     [BASE] = LAYOUT(
-        KC_ESC ,  KC_DOT, KC_J   ,    KC_I,    KC_Y,  KC_COMM,   KC_W,    KC_L,    KC_C,    KC_U,    KC_F,    KC_CAPS,   KC_BSPC,
-        KC_TAB ,   KC_A , KC_O   ,    KC_E,    KC_R,    KC_P,    KC_D,    KC_H,    KC_T,    KC_N,    KC_S,    KC_RSFT,    KC_ENT,
-        KC_LSFT, KC_SCLN, KC_B   ,    KC_C,    KC_D,    KC_A,    KC_B,    KC_M,    KC_G,    KC_V,    KC_Z,    KC_UP,     _______,
-        KC_LCTL, KC_LALT, KC_LCMD,  KC_LCMD, MO(NUM),    KC_SPACE   , MO(SYM), MO(SYM), MO(FN),  KC_LEFT,    KC_DOWN,    KC_RGHT
+        KC_ESC ,  KC_DOT, KC_J   ,    KC_I,    KC_Y,   KC_COMM,  KC_W,    KC_L,    KC_C,    KC_U,    KC_F,    KC_CAPS,    KC_BSPC,
+        KC_TAB ,   KC_A , KC_O   ,    KC_E,    KC_R,   KC_P   ,  KC_D,    KC_H,    KC_T,    KC_N,    KC_S,    KC_RSFT,     KC_ENT,
+        KC_LSFT, KC_SCLN, KC_X   ,    KC_Q,    KC_K,   KC_QUOT,  KC_B,    KC_M,    KC_G,    KC_V,    KC_Z,    KC_UP  , TG(QWERTY),
+        KC_LCTL, KC_LALT, KC_LCMD,  KC_LCMD, MO(NUM),  KC_SPACE      , MO(SYM), MO(SYM), MO(FN),  KC_LEFT,    KC_DOWN,    KC_RGHT
     ),
     
     [NUM] = LAYOUT(
-        _______, _______, KC_LCBR ,KC_RCBR,  KC_MINS, _______, _______, KC_7   ,    KC_8,    KC_9, _______, _______, _______,
-        _______, KC_UNDS, KC_LBRC ,KC_LPRN,  KC_RPRN, KC_PLUS, KC_ASTR, KC_4   ,    KC_5,    KC_6, KC_EQL , _______, _______,
-        _______, KC_COLN, KC_RBRC ,KC_EXLM,  KC_HASH,   KC_LT,   KC_GT, KC_1   ,    KC_2,    KC_3, KC_SLSH, _______, _______,
+        _______, _______, _______ ,KC_LCBR,  KC_RCBR, _______, _______, KC_7   ,    KC_8,    KC_9, _______, _______, _______,
+        _______, KC_UNDS, KC_MINS ,KC_LPRN,  KC_RPRN, KC_PLUS, KC_ASTR, KC_4   ,    KC_5,    KC_6, KC_EQL , _______, _______,
+        _______, KC_COLN, _______ ,KC_LBRC,  KC_RBRC,   KC_LT,   KC_GT, KC_1   ,    KC_2,    KC_3, KC_SLSH, _______, _______,
         _______, _______, _______ ,_______,  _______,        KC_0     , KC_0   , _______, _______, _______, _______, _______
     ),
     
